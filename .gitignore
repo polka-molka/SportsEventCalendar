@@ -1,3 +1,14 @@
+# created by virtualenv automatically
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+# Ignore the local SQLite database so it doesn't overwrite others' data
+*.db
+.idea/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
