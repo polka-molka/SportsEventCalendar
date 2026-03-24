@@ -7,11 +7,15 @@ class Sport(Base):
     id_sport = Column(Integer, primary_key=True, index=True)
     sport_name = Column(String(100), nullable=False)
 
+    events = relationship("Event", back_populates="sport")
+
 class Venue(Base):
     __tablename__ = "venues"
     id_venue = Column(Integer, primary_key=True, index=True)
     venue_name = Column(String(255))
     city = Column(String(100))
+
+    events = relationship("Event", back_populates="venue")
 
 class Team(Base):
     __tablename__ = "teams"
@@ -28,6 +32,9 @@ class Event(Base):
     description = Column(String(500))
     _id_venue = Column(Integer, ForeignKey("venues.id_venue"))
     _id_sport = Column(Integer, ForeignKey("sports.id_sport"))
+
+    sport = relationship("Sport", back_populates="events")
+    venue = relationship("Venue", back_populates="events")
 
 class Competitor(Base):
     __tablename__ = "competitors"
