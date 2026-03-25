@@ -1,54 +1,49 @@
-# created by virtualenv automatically
+# --- Python & Virtual Environments ---
+# Compiled python files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Virtual environments (The big folders we want to skip)
 .venv/
 venv/
 ENV/
 env/
-# Ignore the local SQLite database so it doesn't overwrite others' data
-*.db
-.idea/
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
+# --- Node.js & React Frontend ---
+# Dependencies
+node_modules/
+.pnp
 .pnp.js
 
-# testing
-/coverage
+# Production builds and testing
+build/
+dist/
+coverage/
 
-# production
-/build
-
-# misc
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local SQLite database
+# --- Databases & Environment Variables ---
+# Local SQLite database (prevents overwriting data)
 *.db
-.idea/
 
-# Node
-node_modules/
-build/
-dist/
+# Local secret environment variables
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+
+# --- IDEs & Operating Systems ---
+# JetBrains (PyCharm)
+.idea/
+
+# VS Code
 .vscode/
 
+# OS specific files
 .DS_Store
 Thumbs.db
