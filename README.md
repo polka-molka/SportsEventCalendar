@@ -14,6 +14,8 @@ As for the backend, my first thought was to build it in C#, but I feel like it r
 
 As for the frontend I know React the best, so that was a quick choice.
 
+P.S. I also just realized that I did not fully account for sports with multiple teams or different ranking systems. That is definitely a limitation of the current version ;-;
+
 ## Stack
 
 - Backend: FastAPI, SQLAlchemy, SQLite
