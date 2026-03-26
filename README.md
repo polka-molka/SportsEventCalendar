@@ -1,30 +1,77 @@
-# Sports Event Calendar
+# Sports Event Calendar overview
 
-Small full-stack app for viewing and creating sports events.
+Sports Event Calendar is a small full-stack app for viewing and creating sports events.
+
+I used a data modeler to visualise visualize the database structure:
+
+For this project, I chose a simplified schema because the application scope is relatively small and does not require a highly scalable or heavily normalized solution. For example, I kept venue data in a single Venue table instead of splitting address details into separate tables. I also did not introduce enums or additional lookup tables for values such as event status, because that would add complexity without much benefit at this scale.
+
+I still included the relationships that were necessary for the domain model though. For example, the Competitor table acts as a junction table between Event and Team and it stores extra match-specific data such as role and score.
+
+As for the backend, my first thought was to build it in C#, but I feel like it requires a lot more patience with APIs and entities and for a project like this it did not feel worth it. I chose FastAPI because it was the more practical option.
+
+As for the frontend I know React the best, so that was a quick choice.
 
 ## Stack
 
-- FastAPI
-- SQLAlchemy
-- SQLite
-- React
+- Backend: FastAPI, SQLAlchemy, SQLite
+- Frontend: React
 
-## Run
+## Project Structure
 
-Backend:
+- `back/` contains the FastAPI backend, database models, schemas, and seed script
+- `front/calendar-web/` contains the React frontend
+
+## Run the Backend
 
 1. Activate the virtual environment:
    `.\.venv\Scripts\activate`
 2. Start the API:
-   `uvicorn back.main:app --reload`
+   1. Go to the frontend folder:
+   `cd back`
+   2. Run:
+   `uvicorn main:app --reload` 
 
-Frontend:
+The backend runs on `http://127.0.0.1:8000`.
+
+## Seed the Database
+
+To add sample data:
+
+`python back\seed.py`
+
+## Run the Frontend
 
 1. Go to the frontend folder:
    `cd front\calendar-web`
-2. Start the app:
+2. Start the React app:
    `npm start`
 
-## Seed Data
+The frontend runs on `http://localhost:3000`.
 
-`python back\seed.py`
+## Frontend API Configuration
+
+The frontend reads the API base URL from `REACT_APP_API_URL`.
+
+Default value:
+
+`http://localhost:8000`
+
+To override it, create `front/calendar-web/.env` and set:
+
+`REACT_APP_API_URL=http://127.0.0.1:8000`
+
+## Build and Test
+
+Frontend production build:
+
+`npm run build`
+
+Frontend tests:
+
+`npm test -- --watchAll=false --runInBand`
+
+## Notes
+
+- The backend uses SQLite for local development.
+- CORS is enabled for local frontend development on port `3000`.
