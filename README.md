@@ -4,6 +4,8 @@ Sports Event Calendar is a small full-stack app for viewing and creating sports 
 
 I used a data modeler to visualise visualize the database structure:
 
+<img width="1125" height="682" alt="image" src="https://github.com/user-attachments/assets/a5d107f1-7e5a-4e7b-bbd3-4a3c80c4cbed" />
+
 For this project, I chose a simplified schema because the application scope is relatively small and does not require a highly scalable or heavily normalized solution. For example, I kept venue data in a single Venue table instead of splitting address details into separate tables. I also did not introduce enums or additional lookup tables for values such as event status, because that would add complexity without much benefit at this scale.
 
 I still included the relationships that were necessary for the domain model though. For example, the Competitor table acts as a junction table between Event and Team and it stores extra match-specific data such as role and score.
