@@ -1,0 +1,15 @@
+AI Reflection
+
+I used LLM-based tools such as Copilot, Gemini and Codex during the development of this project for:
+1. Verifying whether my database model was reasonable and close to 3d normal form.
+2. Reviewing the project structure and suggesting small improvements to the backend and frontend.
+3. Helping clean up naming, comments and documentation.
+4. Assisting with debugging issues such as payload mismatches, fetch errors and filtering logic.
+5. Running checks and helping verify whether changes still worked correctly.
+
+I also used GrapesJS to create a simple webpage layout. 
+
+I still had to decide on the structure of the project, understand the schema and relationships, evaluate which suggestions were actually useful
+and make sure the final implementation matched the project requirements. In particular, 
+I had to check whether the proposed changes made sense for my database schema, API design and frontend behavior.
+
