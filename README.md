@@ -47,31 +47,5 @@ To add sample data:
 2. Start the React app:
    `npm start`
 
-The frontend runs on `http://localhost:3000`.
+The frontend runs on `http://localhost:3000`. 
 
-## Frontend API Configuration
-
-The frontend reads the API base URL from `REACT_APP_API_URL`.
-
-Default value:
-
-`http://localhost:8000`
-
-To override it, create `front/calendar-web/.env` and set:
-
-`REACT_APP_API_URL=http://127.0.0.1:8000`
-
-## Build and Test
-
-Frontend production build:
-
-`npm run build`
-
-Frontend tests:
-
-`npm test -- --watchAll=false --runInBand`
-
-## Notes
-
-- The backend uses SQLite for local development.
-- CORS is enabled for local frontend development on port `3000`.
