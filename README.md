@@ -8,9 +8,11 @@ For this project, I chose a simplified schema because the application scope is r
 
 I still included the relationships that were necessary for the domain model though. For example, the Competitor table acts as a junction table between Event and Team and it stores extra match-specific data such as role and score.
 
-As for the backend, my first thought was to build it in C#, but I feel like it requires a lot more patience with APIs and entities and for a project like this it did not feel worth it. I chose FastAPI because it was the more practical option.
+As for the backend, my first thought was to build it in C#, but I feel like it requires a lot more patience with APIs and entities, so I chose FastAPI because it was the more practical option.
 
 As for the frontend I know React the best, so that was a quick choice.
+
+P.S. I also just realized that I did not fully account for sports with multiple teams or different ranking systems. That is definitely a limitation of the current version ;-;
 
 ## Stack
 
