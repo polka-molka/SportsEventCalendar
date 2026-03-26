@@ -1,7 +1,9 @@
+# Simple local seed script that recreates the database with sample data.
 from database import SessionLocal, engine
 import models
 from datetime import datetime
 
+# Rebuild the schema from scratch for a clean local demo dataset.
 models.Base.metadata.drop_all(bind=engine)
 models.Base.metadata.create_all(bind=engine)
 
@@ -21,27 +23,29 @@ try:
     db.commit()
 
     # Teams
-    t1 = models.Team(team_name="Salzburg", abbreviation="RBS", country_code="AUT")
-    t2 = models.Team(team_name="Sturm Graz", abbreviation="STU", country_code="AUT")
-    t3 = models.Team(team_name="KAC", abbreviation="KAC", country_code="AUT")
-    t4 = models.Team(team_name="Capitals", abbreviation="VIC", country_code="AUT")
+    t1 = models.Team(team_name="Salzburg", abbreviation="RBS", _id_sport=football.id_sport)
+    t2 = models.Team(team_name="Sturm Graz", abbreviation="STU", _id_sport=football.id_sport)
+    t3 = models.Team(team_name="KAC", abbreviation="KAC", _id_sport=hockey.id_sport)
+    t4 = models.Team(team_name="Capitals", abbreviation="VIC", _id_sport=hockey.id_sport)
     db.add_all([t1, t2, t3, t4])
     db.commit()
 
     # Events
-    # Football: Salzburg vs. Sturm
+    # Football event: Salzburg vs. Sturm Graz
     event1 = models.Event(
         datetime=datetime(2019, 7, 18, 18, 30),
         status="Finished",
+        match_name="Austrian Summer League Finals",
         description="League Match",
         _id_venue=v1.id_venue,
         _id_sport=football.id_sport
     )
 
-    # Ice Hockey: KAC vs. Capitals
+    # Ice hockey event: KAC vs. Capitals
     event2 = models.Event(
         datetime=datetime(2019, 10, 23, 9, 45),
         status="Scheduled",
+        match_name="Annual Winter Championship",
         description="Championship Game",
         _id_venue=v2.id_venue,
         _id_sport=hockey.id_sport
@@ -56,7 +60,7 @@ try:
         models.Competitor(_id_event=event1.id_event, _id_team=t2.id_team, role="Away", score=1),
 
         # Event 2
-        # Score is null cuz it's 'Scheduled'
+        # Score is null because the event is still scheduled
         models.Competitor(_id_event=event2.id_event, _id_team=t3.id_team, role="Home", score=None),
         models.Competitor(_id_event=event2.id_event, _id_team=t4.id_team, role="Away", score=None)
     ]

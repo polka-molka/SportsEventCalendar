@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d177435-ff68-4410-8f2e-9eeae7450981" name="Changes" comment="move db and api to the back folder" />
+    <list default="true" id="9d177435-ff68-4410-8f2e-9eeae7450981" name="Changes" comment="move db and api to the back folder">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/seed.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/seed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/sports_calendar.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/calendar-web/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/calendar-web/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/calendar-web/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/calendar-web/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/calendar-web/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/calendar-web/src/App.test.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +64,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;FastAPI.SportsEventCalendar.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.test_main | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.test_main | #2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.seed.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -75,6 +91,12 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="test_main | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/back/test_main.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test_main | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/back/test_main.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="SportsEventCalendar" type="Python.FastAPI">
       <option name="file" value="$PROJECT_DIR$/main.py" />
       <module name="SportsEventCalendar" />
@@ -90,6 +112,12 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.test_main | #2" />
+        <item itemvalue="HTTP Request.test_main | #1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -108,7 +136,10 @@
       <option name="presentableId" value="Default" />
       <updated>1774223706161</updated>
       <workItem from="1774223707520" duration="11874000" />
-      <workItem from="1774388324097" duration="2631000" />
+      <workItem from="1774388324097" duration="18478000" />
+      <workItem from="1774479701441" duration="1040000" />
+      <workItem from="1774480768695" duration="149000" />
+      <workItem from="1774480995979" duration="1695000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -232,6 +263,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SportsEventCalendar$SportsEventCalendar.coverage" NAME="SportsEventCalendar Coverage Results" MODIFIED="1774294065507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/SportsEventCalendar$seed.coverage" NAME="seed Coverage Results" MODIFIED="1774295817462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SportsEventCalendar$main.coverage" NAME="main Coverage Results" MODIFIED="1774478238237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/back" />
+    <SUITE FILE_PATH="coverage/SportsEventCalendar$seed.coverage" NAME="seed Coverage Results" MODIFIED="1774481062510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/back" />
   </component>
 </project>
